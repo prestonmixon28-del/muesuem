@@ -21,5 +21,6 @@ public class Main {
         System.out.println("after removal:");
 
         System.out.println("size " + collection.size());
+        System.out.println("contains b205 " + collection.contains(search));
 }
 }
