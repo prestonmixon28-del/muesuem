@@ -1,5 +1,25 @@
 public class Main {
-    static void main() {
-        System.out.println("Hello World!");
-    }
+    public static void main(String[] args) {
+
+        ArrayCollection<Artifact> collection = new ArrayCollection<>();
+
+        Artifact a1 = new Artifact("a101", "anciant vase", "greek");
+        Artifact a2 = new Artifact("a102", "roman coin", "roman");
+        Artifact a3 = new Artifact("a103", "golden mask", "egyptian");
+
+        collection.add(a1);
+        collection.add(a2);
+        collection.add(a3);
+
+        Artifact search = new Artifact("b205", "", "");
+
+        System.out.println("found " + collection.find(search));
+        System.out.println("contains " + collection.contains(search));
+
+        collection.remove(search);
+
+        System.out.println("after removal:");
+
+        System.out.println("size " + collection.size());
+}
 }
