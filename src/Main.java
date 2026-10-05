@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
+
 public class Main {
     public static void main(String[] args) {
 
@@ -22,5 +26,17 @@ public class Main {
 
         System.out.println("size " + collection.size());
         System.out.println("contains b205 " + collection.contains(search));
+
+        ArrayList<Artifact> museumList = new ArrayList<>();
+        museumList.add(new Artifact("04m", "artifact m", "modern"));
+        museumList.add(new Artifact("a01", "artifact a", "ancient"));
+        museumList.add(new Artifact("z99", "artifact z", "modern"));
+        museumList.add(new Artifact("b12", "artifact b", "bronze age"));
+
+        System.out.println("before sorting ");
+        System.out.println(museumList);
+        Collections.sort(museumList);
+        System.out.println("after sorting ");
+        System.out.println(museumList);
 }
 }
